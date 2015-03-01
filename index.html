@@ -1,0 +1,229 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Lego Case Designer</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+</head>
+
+<body>
+    <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+<div class="title">
+    <div class="col-sm-12 no-pad">
+        <h2>Lego Case Designer</h2>
+    </div>
+</div>
+    <div class="container">
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <!-- Left -->
+                <!-- List of colors to paint with -->
+                <div id="tile-holder" class="col-md-3">
+                    <h5>Colors</h5>
+                    <div class="row tile-row">
+                        <div class="col-xs-6">
+                            <button class="tile tile-black" data-color="#000000"></button>
+                        </div>
+                        <div class="col-xs-6">
+                            <button class="tile tile-white" data-color="#FFFFFF"></button>
+                        </div>
+                    </div>
+                    <div class="row tile-row">
+                        <div class="col-xs-6">
+                            <button class="tile tile-red" data-color="#FF0000"></button>
+                        </div>
+                        <div class="col-xs-6">
+                            <button class="tile tile-yellow" data-color="#FFFF00"></button>
+                        </div>
+                    </div>
+                    <div class="row tile-row">
+                        <div class="col-xs-6">
+                            <button class="tile tile-blue" data-color="#0000FF"></button>
+                        </div>
+                        <div class="col-xs-6">
+                            <button class="tile tile-lightblue" data-color="#ADD8E6"></button>
+                        </div>
+                    </div>
+                    <div class="row tile-row">
+                        <div class="col-xs-6">
+                            <button class="tile tile-orange" data-color="#ffa500"></button>
+                        </div>
+                        <div class="col-xs-6">
+                            <button class="tile tile-grey" data-color="#AFAFAF"></button>
+                        </div>
+                    </div>
+                    <div class="row tile-row">
+                        <div class="col-xs-6">
+                            <button class="tile tile-pink" data-color="#FFB6C1"></button>
+                        </div>
+                        <div class="col-xs-6">
+                            <button class="tile tile-purple" data-color="#800080"></button>
+                        </div>
+                    </div>
+                    <div class="row tile-row">
+                        <div class="col-xs-6">
+                            <button class="tile tile-brown" data-color="#7F3F00"></button>
+                        </div>
+                        <div class="col-xs-6">
+                            <button class="tile tile-darkgrey" data-color="#52534E"></button>
+                        </div>
+                    </div>
+                    <div class="row tile-row">
+                        <div class="col-xs-6">
+                            <button class="tile tile-green" data-color="#008000"></button>
+                        </div>
+                        <div class="col-xs-6">
+                            <button class="tile tile-gold" data-color="#C0C427"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-9">
+                    <canvas id="canvas-main">
+                    <!-- The canvas where the magic happens -->
+                    </canvas>
+                    <div class="canvas-border">
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <!-- Right -->
+                <!-- The complate right column -->
+                <div id="case-size">
+                    Upload Image
+                    <br>
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8 col-xs-8">
+                            <input type="file" class="form form-control" id="image">
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                            <img src="" alt="" id="blah" class="upload-preview">
+                        </div>
+                    </div>
+                    <!-- Size:
+            <br>
+            <div class="row">
+                <div class="col-md-5 col-sm-5 col-xs-5">
+                    <input type="text" id="case-width" class="form form-control" value="7" placeholder="width">
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2" style="text-align: center; font-size: 2em;">
+                    &times;
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-5">
+                    <input type="text" id="case-height" class="form form-control" value="15" placeholder="height">
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <button id="set" class="btn btn-primary btn-sm btn-block">Set</button>
+                </div>
+            </div> -->
+                </div>
+
+                <br>
+                <br>
+
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <button id="count" class="btn btn-lego btn-block btn-lg">Lego it!</button>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-md-6 center">
+                        <!-- RL -->
+                        <div id="pxPrev" style="width:210px;">
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 center">
+                        <!-- RR -->
+                        <div class="blocksToBuy">
+
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        Built with &#9829; by <a href="https://github.com/bartbarto">BartBarto</a>.
+        <br>If you're looking to design with more detail or in 3D, take a look at <a href="http://ldd.lego.com"> Lego Digital Designer.</a>.
+    </div>
+
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+    (function(b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
+            function() {
+                (b[l].q = b[l].q || []).push(arguments)
+            });
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = '//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+    </script>
+
+    <!-- build:js scripts/plugins.js -->
+    <!--  <script src="bower_components/bootstrap/js/affix.js"></script>
+        <script src="bower_components/bootstrap/js/alert.js"></script>
+        <script src="bower_components/bootstrap/js/dropdown.js"></script>
+        <script src="bower_components/bootstrap/js/tooltip.js"></script>
+        <script src="bower_components/bootstrap/js/modal.js"></script>
+        <script src="bower_components/bootstrap/js/transition.js"></script>
+        <script src="bower_components/bootstrap/js/button.js"></script>
+        <script src="bower_components/bootstrap/js/popover.js"></script>
+        <script src="bower_components/bootstrap/js/carousel.js"></script>
+        <script src="bower_components/bootstrap/js/scrollspy.js"></script>
+        <script src="bower_components/bootstrap/js/collapse.js"></script>
+        <script src="bower_components/bootstrap/js/tab.js"></script> -->
+    <!-- endbuild -->
+
+    <!-- build:js({app,.tmp}) scripts/main.js -->
+    <script src="scripts/nearestColor.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>

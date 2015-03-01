@@ -1,0 +1,260 @@
+canvas{
+    image-rendering: optimizeSpeed;             /* FUCK SMOOTHING, GIVE ME SPEED  */
+    image-rendering: -moz-crisp-edges;          /* Firefox                        */
+    image-rendering: -o-crisp-edges;            /* Opera                          */
+    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+    -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+
+    transform-origin:right top;
+    -webkit-transform-origin:right top;
+    -moz-transform-origin:right top;
+
+    transform:scale(40);
+    -webkit-transform:scale(40);
+    -moz-transform:scale(40);
+
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    z-index: 10;
+}
+
+.canvas-border{
+    position: absolute;
+    right: 9.9%;
+    top: 9.5%;
+
+    width: 282px;
+    height: 602px;
+    border: solid rgba(0,0,0,0.2) 1px;
+    z-index: 5;
+}
+
+.lego{
+    border: solid rgba(0,0,0,0.2) 1px;
+}
+
+.title h2{
+    text-align: center;
+    width: 100%;
+    background: rgba(0,0,0,0.2);
+    height: auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: solid rgba(0,0,0,0.4) 1px;
+    border-width: 1px 0;
+}
+
+.no-pad{
+    padding: 0 !important;
+}
+
+.btn-lego{
+    background: yellow;
+    border-color: #FFE700;
+    color: red;
+    font-weight: 800;
+}
+
+.btn-lego:hover{
+    background-color: #FFE700;
+    border-color: #FFE700 !important;
+    color: red !important;
+}
+
+img.upload-preview{
+    max-width: 100%;
+    max-height: 100px;
+}
+
+#case{
+    display: block;
+    position: relative;
+
+    width: 100%;
+    z-index: 5;
+}
+
+#case-holder{
+
+    width: 50%;
+    border-style: solid;
+    border-color: black;
+    border-width: 1em;
+    border-radius: 2em;
+    z-index: 10;
+
+    float: left;
+}
+
+
+.tile{
+    border: solid darkgrey 1px;
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.tile:focus{
+    border: solid black 2px;
+}
+
+.tile-row{
+    margin-bottom: 50px;
+}
+
+.tile-black{
+    background: black;
+}
+
+.tile-white{
+    background: white;
+}
+.tile-red{
+    background: red;
+}
+.tile-yellow{
+    background: yellow;
+}
+.tile-green{
+    background: green;
+}
+
+.tile-blue{
+    background: blue;
+}
+.tile-lightblue{
+    background: lightblue;
+}
+.tile-orange{
+    background: orange;
+}
+.tile-grey{
+    background: #AFAFAF;
+}
+.tile-pink{
+    background: pink;
+}
+.tile-purple{
+    background: #8B2CA1;
+}
+.tile-brown{
+    background: #7F3F00;
+}
+.tile-darkgrey{
+    background: #52534E;
+}
+.tile-reddish{
+    background: #C44251;
+}
+.tile-gold{
+    background: #C0C427;
+}
+
+.tile{
+    position: absolute;
+}
+
+.width-columm{
+    float: left;
+}
+
+.block{
+    display: block;
+    box-shadow: inset 0 0 0 1px rgba(0, 255, 0, 0.5);
+    z-index: 2
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+    padding-bottom: 20px;
+}
+
+.container{
+    min-height: 800px;
+}
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+    /*bottom: -5%;*/
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+    margin: 40px 0;
+}
+
+.marketing p + h4 {
+    margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
+}
