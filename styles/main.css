@@ -6,6 +6,11 @@ canvas{
     image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
     -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
 
+    image-rendering: -moz-crisp-edges;
+	image-rendering: -webkit-crisp-edges;
+	image-rendering: pixelated;
+	image-rendering: crisp-edges;
+    
     transform-origin:right top;
     -webkit-transform-origin:right top;
     -moz-transform-origin:right top;
